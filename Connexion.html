@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+    background-image: url('pexels-expect-best-351264.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Cela permet de fixer l'image de fond, ce qui peut améliorer l'affichage sur les appareils mobiles */
+        }
+
+        /* Ajoutez ces styles pour gérer le dimensionnement de l'image sur les appareils mobiles */
+        .content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Ajoute un fond semi-transparent sur le contenu pour améliorer la lisibilité */
+        }
+
+
+        .connexion-section {
+            text-align: center;
+            margin-top: 200px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .connexion-section h1 {
+            color: #333;
+        }
+
+        .connexion-section .form-group {
+            margin: 10px 0;
+        }
+
+        .connexion-section label {
+            display: block;
+        }
+
+        .connexion-section input[type="email"],
+        .connexion-section input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .connexion-section .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .connexion-section .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .connexion-section .text-danger {
+            color: #ff0000;
+        }
+
+        .montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+ /* Styles pour le bouton du menu mobile */
+.menu-button {
+  cursor: pointer;
+  margin-right: 250px; /* Ajustez la marge droite selon vos besoins */
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* Styles pour le menu mobile lorsqu'il est fermé */
+.menu-content {
+  display: none;
+}
+
+/* Styles pour le menu mobile lorsqu'il est ouvert */
+.menu-content.active {
+  display: block;
+}
+
+/* Styles pour le menu mobile sur les appareils mobiles */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block; /* Afficher le menu mobile */
+    /* Autres styles de mise en forme si nécessaire */
+  }
+}
+
+/* Styles pour masquer le menu mobile sur les appareils de bureau */
+@media (min-width: 769px) {
+  .menu-button {
+    display: none; /* Masquer le bouton sur les appareils de bureau */
+  }
+
+  .mobile-menu {
+    display: none; /* Masquer le menu mobile */
+  }
+}
+
+    </style>
+   
+</head>
+
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    
+    
+
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center">
+            
+            <div class="col-6 col-xl-2">
+                <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0 montserrat">BelgeBanque<span class="text-primary"></span></a></h1>
+                
+              </div>
+                
+            </div>
+    
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+    
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                  <li><a href="index.html" class="nav-link">Accueil</a></li>
+                  <!-- <li><a href="Connexion.html" class="nav-link">Connexion</a></li> -->
+                  <!-- <li class="has-children"> -->
+                    <!-- <a href="#about-section" class="nav-link">About Us</a> -->
+                    <!-- <ul class="dropdown">
+                      <li><a href="#team-section" class="nav-link">Team</a></li>
+                      <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
+                      <li><a href="#faq-section" class="nav-link">FAQ</a></li>
+                      <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+                      <li><a href="#services-section" class="nav-link">Services</a></li>
+                      <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
+                      <li><a href="#testimonials-section" class="nav-link">Connexion</a></li>
+                    
+                    </ul> -->
+                  </li>
+                  
+                  
+                  <!-- <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                  <li><a href="#contact-section" class="nav-link">Contact</a></li> -->
+                  <!-- <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
+                  <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
+                  <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li> -->
+                </ul>
+              </nav>
+            </div>
+    
+    
+           
+        </div>
+        
+      </header>
+ 
+    <!-- Your navigation bar code goes here -->
+
+    <div class="container montserrat">
+        <div class="connexion-section">
+            <h1>Connexion</h1>
+            <form id="loginForm" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Se connecter</button>
+            </form>
+            <div id="error-message" class="text-danger"></div>
+            <div id="success-message" class="text-success"></div>
+            <div id="loading-message" class="text-info"></div>
+        </div>
+    </div>
+    
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            const successMessage = document.getElementById('success-message');
+            const loadingMessage = document.getElementById('loading-message');
+    
+            // Affiche le message de chargement
+            loadingMessage.textContent = 'Connexion en cours...';
+    
+            // Simule un délai pour montrer le chargement (peut être supprimé en production)
+            setTimeout(function() {
+                if (email === 'lypru23@gmail.com' && password === 'UK492Dba2d4Ljv') {
+                    // Affiche le message de succès
+                    successMessage.textContent = 'Connexion réussie !';
+    
+                    // Redirection vers la page d'accueil après 2 secondes (peut être ajusté)
+                    setTimeout(function() {
+                        window.location.href = 'dashboard.html';
+                    }, 2000);
+                } else {
+                    // Affiche un message d'erreur
+                    errorMessage.textContent = 'Adresse e-mail ou mot de passe incorrects';
+                }
+    
+                // Cache le message de chargement
+                loadingMessage.textContent = '';
+            }, 3000); // Délai de simulation de chargement (peut être ajusté)
+    
+            // Empêche le formulaire de se soumettre
+            return false;
+        }
+    </script>
+    
+</body>
+</html>
