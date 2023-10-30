@@ -1210,41 +1210,62 @@ button:focus {
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-    const virementButton = document.getElementById("virement-button");
     const validerButton = document.getElementById("valider-button");
     const virementForm = document.querySelector(".virement-form");
 
     validerButton.addEventListener("click", function (e) {
         e.preventDefault();
 
-        // Demande de confirmation
-        const confirmation = confirm("Êtes-vous sûr de vouloir effectuer ce virement ?");
-        if (confirmation) {
-            // Affichage d'un message de chargement
-            validerButton.textContent = "En cours...";
-            validerButton.disabled = true;
+        // Validation du formulaire
+        if (validerFormulaire()) {
+            // Si le formulaire est valide, afficher la demande de confirmation
+            const confirmation = confirm("Êtes-vous sûr de vouloir effectuer ce virement ?");
+            if (confirmation) {
+                // Affichage d'un message de chargement
+                validerButton.textContent = "En cours...";
+                validerButton.disabled = true;
 
-            // Simule un échec (vous pouvez ajouter votre propre logique ici)
-            const operationReussie = false; // Mettez à true pour simuler une opération réussie
+                // Simule un échec (vous pouvez ajouter votre propre logique ici)
+                const operationReussie = false; // Mettez à true pour simuler une opération réussie
 
-            setTimeout(function () {
-                if (operationReussie) {
-                    // Affichage du message de succès (opération réussie)
-                    alert("Virement effectué avec succès!");
-                    // Réinitialisation du formulaire
-                    virementForm.reset();
-                } else {
-                    // Affichage du message d'erreur (opération échouée)
-                    alert("Opération échouée. Veuillez contacter votre banque.");
-                }
+                setTimeout(function () {
+                    if (operationReussie) {
+                        // Affichage du message de succès (opération réussie)
+                        alert("Virement effectué avec succès!");
+                        // Réinitialisation du formulaire
+                        virementForm.reset();
+                    } else {
+                        // Affichage du message d'erreur (opération échouée)
+                        alert("Opération échouée. Veuillez contacter votre banque.");
+                    }
 
-                // Réinitialisation du bouton Valider
-                validerButton.textContent = "Valider le virement";
-                validerButton.disabled = false;
-            }, 2000); // Délai de 2 secondes (vous pouvez le modifier)
+                    // Réinitialisation du bouton Valider
+                    validerButton.textContent = "Valider le virement";
+                    validerButton.disabled = false;
+                }, 2000); // Délai de 2 secondes (vous pouvez le modifier)
+            }
         }
     });
+
+    function validerFormulaire() {
+        // Effectuez la validation du formulaire ici
+        const destinataire = document.getElementById("destinataire").value;
+        const telephone = document.getElementById("telephone").value;
+        const adresse = document.getElementById("adresse").value;
+        const iban = document.getElementById("iban").value;
+        const montant = document.getElementById("montant").value;
+
+        if (destinataire === "" || telephone === "" || adresse === "" || iban === "" || montant === "") {
+            alert("Veuillez remplir tous les champs du formulaire.");
+            return false; // Le formulaire n'est pas valide
+        }
+
+        // Vous pouvez ajouter d'autres validations personnalisées ici
+        // Si le formulaire est valide, retournez true
+        return true; // Le formulaire est valide
+    }
 });
+      
 
         document.getElementById("deconnexion-button").addEventListener("click", function() {
         var confirmation = confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
